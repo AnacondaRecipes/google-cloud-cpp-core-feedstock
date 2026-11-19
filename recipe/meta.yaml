@@ -24,6 +24,7 @@ requirements:
     - libprotobuf {{ libprotobuf }}
   host:
     - libabseil {{ libabseil }}
+    - libcxx-devel {{ cxx_compiler_version }}  # [osx]
     - libcrc32c {{ libcrc32c }}
     - libcurl {{ libcurl }}
     - libgrpc {{ libgrpc }}
@@ -53,6 +54,7 @@ outputs:
         - libprotobuf {{ libprotobuf }}
       host:
         - libabseil {{ libabseil }}
+        - libcxx-devel {{ cxx_compiler_version }}  # [osx]
         - libcurl {{ libcurl }}
         - libgrpc {{ libgrpc }}
         - libprotobuf {{ libprotobuf }}
@@ -100,6 +102,7 @@ outputs:
       host:
         - {{ pin_subpackage("libgoogle-cloud", exact=True) }}
         - libabseil {{ libabseil }}
+        - libcxx-devel {{ cxx_compiler_version }}  # [osx]
         - libcurl {{ libcurl }}
         - libgrpc {{ libgrpc }}
         - libprotobuf {{ libprotobuf }}
@@ -204,6 +207,7 @@ outputs:
       host:
         - {{ pin_subpackage("libgoogle-cloud-devel", exact=True) }}
         - libabseil {{ libabseil }}
+        - libcxx-devel {{ cxx_compiler_version }}  # [osx]
         - libcrc32c {{ libcrc32c }}
         - libcurl {{ libcurl }}
         - openssl {{ openssl }}       # [unix]
